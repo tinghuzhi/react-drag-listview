@@ -1,12 +1,11 @@
 const closest = function(el, selector, rootNode) {
-  const rootElement = rootNode || document.body;
   let element = el;
   const matchesSelector = element.matches
                           || element.webkitMatchesSelector
                           || element.mozMatchesSelector
                           || element.msMatchesSelector;
   while (element) {
-    const isRoot = element === rootElement || element.tagName === 'HTML';
+    const isRoot = element === rootNode || element.tagName === 'HTML';
     if (isRoot || matchesSelector.call(element, selector)) {
       if (isRoot) {
         element = null;
