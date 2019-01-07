@@ -6,9 +6,9 @@ const closest = function(el, selector, rootNode) {
                           || element.mozMatchesSelector
                           || element.msMatchesSelector;
   while (element) {
-    const flagRoot = element === rootElement;
-    if (flagRoot || matchesSelector.call(element, selector)) {
-      if (flagRoot) {
+    const isRoot = element === rootElement || element.tagName === 'HTML';
+    if (isRoot || matchesSelector.call(element, selector)) {
+      if (isRoot) {
         element = null;
       }
       break;
