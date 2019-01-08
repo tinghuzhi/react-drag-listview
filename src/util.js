@@ -5,7 +5,7 @@ const closest = function(el, selector, rootNode) {
                           || element.mozMatchesSelector
                           || element.msMatchesSelector;
   while (element) {
-    const isRoot = element === rootNode || element.tagName === 'HTML';
+    const isRoot = element === rootNode || element === document.body;
     if (isRoot || matchesSelector.call(element, selector)) {
       if (isRoot) {
         element = null;
