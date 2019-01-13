@@ -118,6 +118,12 @@ class Demo extends React.Component {
       <td>get drag handle cssQuery</td>
     </tr>
     <tr>
+      <td>ignoreSelector</td>
+      <td>String</td>
+      <td><b>nodeSelector</b></td>
+      <td>ignore DOM lists</td>
+    </tr>
+    <tr>
       <td>enableScroll</td>
       <td>Boolean</td>
       <td>true</td>
