@@ -16,6 +16,7 @@ class ReactDragListView extends Component {
     onDragEnd: PropTypes.func.isRequired,
     handleSelector: PropTypes.string,
     nodeSelector: PropTypes.string,
+    ignoreSelector: PropTypes.string,
     enableScroll: PropTypes.bool,
     scrollSpeed: PropTypes.number,
     lineClassName: PropTypes.string,
@@ -24,6 +25,7 @@ class ReactDragListView extends Component {
 
   static defaultProps = {
     nodeSelector: DEFAULT_NODE_SELECTOR,
+    ignoreSelector: '',
     enableScroll: true,
     scrollSpeed: 10,
     handleSelector: '',
@@ -85,7 +87,7 @@ class ReactDragListView extends Component {
         ev.preventDefault();
         return true;
       };
-      const fromIndex = getDomIndex(target);
+      const fromIndex = getDomIndex(target, this.props.ignoreSelector);
       this.setState({ fromIndex, toIndex: fromIndex });
       this.scrollElement = getScrollElement(parentNode);
     }
@@ -96,7 +98,7 @@ class ReactDragListView extends Component {
     const eventData = e;
     let toIndex;
     if (target) {
-      toIndex = getDomIndex(target);
+      toIndex = getDomIndex(target, this.props.ignoreSelector);
       if (this.props.enableScroll) {
         this.resolveAutoScroll(eventData, target);
       }

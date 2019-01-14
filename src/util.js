@@ -1,12 +1,17 @@
+/* global Element */
+
+if (Element && !Element.prototype.matches) {
+  var proto = Element.prototype;
+  proto.matches = proto.matchesSelector ||
+      proto.mozMatchesSelector || proto.msMatchesSelector ||
+      proto.oMatchesSelector || proto.webkitMatchesSelector;
+}
+
 const closest = function(el, selector, rootNode) {
   let element = el;
-  const matchesSelector = element.matches
-                          || element.webkitMatchesSelector
-                          || element.mozMatchesSelector
-                          || element.msMatchesSelector;
   while (element) {
     const isRoot = element === rootNode || element === document.body;
-    if (isRoot || matchesSelector.call(element, selector)) {
+    if (isRoot || element.matches(selector)) {
       if (isRoot) {
         element = null;
       }
@@ -36,8 +41,10 @@ const getScrollElement = function(el) {
   return element;
 };
 
-const getDomIndex = function(el) {
-  return Array.from(el.parentNode.children).indexOf(el);
+const getDomIndex = function(el, ignoreSelectors) {
+  return Array.from(el.parentNode.children)
+    .filter(e => (ignoreSelectors === '' ? true : !e.matches(ignoreSelectors)))
+    .indexOf(el);
 };
 
 export { getScrollElement, closest, getDomIndex };

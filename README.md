@@ -22,6 +22,7 @@ React drag list component.
 * ###### Drag Rows
     * [Simple Dragging Demo](https://raisezhang.github.io/react-drag-listview/examples/simple.html)
     * [Dragging Ant-Design Table](https://codepen.io/raisezhang/pen/MmjypX)
+    * [Dragging Ant-Design Table width expanded rows](https://codepen.io/anon/pen/BvvbWv)
 
 * ###### Drag Columns
     * [Simple Dragging Columns Demo](https://raisezhang.github.io/react-drag-listview/examples/dragColumn.html)
@@ -116,6 +117,12 @@ class Demo extends React.Component {
       <td>String</td>
       <td><b>nodeSelector</b></td>
       <td>get drag handle cssQuery</td>
+    </tr>
+    <tr>
+      <td>ignoreSelector</td>
+      <td>String</td>
+      <td><b>nodeSelector</b></td>
+      <td>ignore node list</td>
     </tr>
     <tr>
       <td>enableScroll</td>
