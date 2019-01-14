@@ -7,7 +7,7 @@
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" rel="stylesheet"/>
-  <title>react-drag-listview@0.1.3 - drag list view and table view component for react</title>
+  <title>react-drag-listview@0.1.4 - drag list view and table view component for react</title>
   <style>
     @font-face {
       font-family: octicons-anchor;
@@ -737,7 +737,7 @@
 
 <body>
 <div class="header">
-  <h1>react-drag-listview@0.1.3</h1>
+  <h1>react-drag-listview@0.1.4</h1>
 </div>
 <div class="examples">
   <h3>EXAMPLES</h3>
@@ -761,13 +761,14 @@
 <h2>install<a id="user-content-install" name="install" class="anchor" aria-hidden="true" href="#install"><span class="octicon octicon-link"></span></a></h2><p><a href="https://npmjs.org/package/react-drag-listview" title="null"><img src="https://nodei.co/npm/react-drag-listview.png" alt="rc-table"></a></p>
 <h2>Example<a id="user-content-example" name="example" class="anchor" aria-hidden="true" href="#example"><span class="octicon octicon-link"></span></a></h2><ul>
 <li><h6>Drag Rows<a id="user-content-drag-rows" name="drag-rows" class="anchor" aria-hidden="true" href="#drag-rows"><span class="octicon octicon-link"></span></a></h6><ul>
-<li><a href="https://raisezhang.github.io/react-drag-listview/examples/simple.html" title="null">Simple Dragging Demo</a></li>
-<li><a href="https://codepen.io/raisezhang/pen/MmjypX" title="null">Dragging Ant-Design Table</a></li>
+<li><a href="https://raisezhang.github.io/react-drag-listview/examples/simple.html" title="null">Simple dragging demo</a></li>
+<li><a href="https://codepen.io/raisezhang/pen/MmjypX" title="null">Dragging Ant-Design table</a></li>
+<li><a href="https://codepen.io/raisezhang/pen/OrrGJL" title="null">Dragging Ant-Design table width expanded rows</a></li>
 </ul>
 </li>
 <li><h6>Drag Columns<a id="user-content-drag-columns" name="drag-columns" class="anchor" aria-hidden="true" href="#drag-columns"><span class="octicon octicon-link"></span></a></h6><ul>
-<li><a href="https://raisezhang.github.io/react-drag-listview/examples/dragColumn.html" title="null">Simple Dragging Columns Demo</a></li>
-<li><a href="https://codepen.io/raisezhang/pen/MoMoyz" title="null">Dragging Ant-Design Table Columns</a></li>
+<li><a href="https://raisezhang.github.io/react-drag-listview/examples/dragColumn.html" title="null">Simple dragging columns demo</a></li>
+<li><a href="https://codepen.io/raisezhang/pen/MoMoyz" title="null">Dragging Ant-Design table columns</a></li>
 </ul>
 </li>
 </ul>
@@ -844,6 +845,12 @@ class Demo extends React.Component {
       <td>String</td>
       <td><b>nodeSelector</b></td>
       <td>get drag handle cssQuery</td>
+    </tr>
+    <tr>
+      <td>ignoreSelector</td>
+      <td>String</td>
+      <td></td>
+      <td>ignore node list</td>
     </tr>
     <tr>
       <td>enableScroll</td>
