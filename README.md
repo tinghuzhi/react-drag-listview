@@ -121,7 +121,7 @@ class Demo extends React.Component {
     <tr>
       <td>ignoreSelector</td>
       <td>String</td>
-      <td><b>nodeSelector</b></td>
+      <td></td>
       <td>ignore node list</td>
     </tr>
     <tr>
