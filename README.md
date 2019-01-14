@@ -20,13 +20,13 @@ React drag list component.
 ## Example
 
 * ###### Drag Rows
-    * [Simple Dragging Demo](https://raisezhang.github.io/react-drag-listview/examples/simple.html)
-    * [Dragging Ant-Design Table](https://codepen.io/raisezhang/pen/MmjypX)
-    * [Dragging Ant-Design Table width expanded rows](https://codepen.io/anon/pen/BvvbWv)
+    * [Simple dragging demo](https://raisezhang.github.io/react-drag-listview/examples/simple.html)
+    * [Dragging Ant-Design table](https://codepen.io/raisezhang/pen/MmjypX)
+    * [Dragging Ant-Design table width expanded rows](https://codepen.io/raisezhang/pen/OrrGJL)
 
 * ###### Drag Columns
-    * [Simple Dragging Columns Demo](https://raisezhang.github.io/react-drag-listview/examples/dragColumn.html)
-    * [Dragging Ant-Design Table Columns](https://codepen.io/raisezhang/pen/MoMoyz)
+    * [Simple dragging columns demo](https://raisezhang.github.io/react-drag-listview/examples/dragColumn.html)
+    * [Dragging Ant-Design table columns](https://codepen.io/raisezhang/pen/MoMoyz)
 
 ## Development
 
