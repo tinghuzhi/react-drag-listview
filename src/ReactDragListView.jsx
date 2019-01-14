@@ -25,7 +25,7 @@ class ReactDragListView extends Component {
 
   static defaultProps = {
     nodeSelector: DEFAULT_NODE_SELECTOR,
-    ignoreSelector: undefined,
+    ignoreSelector: '',
     enableScroll: true,
     scrollSpeed: 10,
     handleSelector: '',

@@ -43,7 +43,7 @@ const getScrollElement = function(el) {
 
 const getDomIndex = function(el, ignoreSelectors) {
   return Array.from(el.parentNode.children)
-    .filter(e => (ignoreSelectors ? !e.matches(ignoreSelectors) : true))
+    .filter(e => (ignoreSelectors === '' ? true : !e.matches(ignoreSelectors)))
     .indexOf(el);
 };
 

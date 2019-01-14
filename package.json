@@ -56,7 +56,6 @@
     "prop-types": "^15.5.8"
   },
   "devDependencies": {
-    "antd": "^3.12.2",
     "expect.js": "~0.3.1",
     "pre-commit": "1.x",
     "rc-tools": "^8.2.2",
