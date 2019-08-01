@@ -1,6 +1,6 @@
 /* global Element */
 
-if (Element && !Element.prototype.matches) {
+if (typeof Element !== 'undefined' && !Element.prototype.matches) {
   var proto = Element.prototype;
   proto.matches = proto.matchesSelector ||
       proto.mozMatchesSelector || proto.msMatchesSelector ||
