@@ -24355,7 +24355,7 @@ var closest = function closest(el, selector, rootNode) {
   var element = el;
   while (element) {
     var isRoot = element === rootNode || element === document.body;
-    if (isRoot || element.matches(selector)) {
+    if (isRoot || element.nodeType === 1 && element.matches(selector)) {
       if (isRoot) {
         element = null;
       }
