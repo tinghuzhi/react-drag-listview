@@ -11,7 +11,7 @@ const closest = function(el, selector, rootNode) {
   let element = el;
   while (element) {
     const isRoot = element === rootNode || element === document.body;
-    if (isRoot || element.matches(selector)) {
+    if (isRoot || (element.nodeType === 1 && element.matches(selector))) {
       if (isRoot) {
         element = null;
       }
