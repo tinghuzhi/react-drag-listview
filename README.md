@@ -61,7 +61,7 @@ class Demo extends React.Component {
     const that = this;
     const dragProps = {
       onDragEnd(fromIndex, toIndex) {
-        const data = that.state.data;
+        const data = [...that.state.data];
         const item = data.splice(fromIndex, 1)[0];
         data.splice(toIndex, 0, item);
         that.setState({ data });
