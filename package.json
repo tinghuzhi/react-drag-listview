@@ -52,6 +52,7 @@
     "lint:fix": "rc-tools run lint --fix"
   },
   "dependencies": {
+    "babel-runtime": "^6.26.0",
     "prop-types": "^15.5.8"
   },
   "devDependencies": {
