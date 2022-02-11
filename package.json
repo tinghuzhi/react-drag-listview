@@ -17,11 +17,13 @@
   "homepage": "https://github.com/raisezhang/react-drag-listview#readme",
   "main": "./lib/index",
   "module": "./es/index",
+  "types": "./index.d.ts",
   "files": [
     "assets/*.css",
     "dist",
     "es",
-    "lib"
+    "lib",
+    "index.d.ts"
   ],
   "maintainers": [
     "raisezhang@hotmail.com"
