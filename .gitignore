@@ -1,0 +1,10 @@
+.DS_Store
+tmp
+node_modules
+lib
+dist
+coverage
+npm-debug.log*
+build
+package-lock.json
+es/
