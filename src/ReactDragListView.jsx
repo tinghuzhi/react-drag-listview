@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { closest, getDomIndex, getScrollElement } from './util';
+import { closest, getDomIndex, getScrollElement, isTouchScreen } from './util';
 
 const DEFAULT_NODE_SELECTOR = 'tr';
 const DIRECTIONS = {
@@ -35,6 +35,7 @@ class ReactDragListView extends Component {
 
   constructor(props) {
     super(props);
+    this.onTouchStart = this.onTouchStart.bind(this);
     this.onMouseDown = this.onMouseDown.bind(this);
     this.onDragStart = this.onDragStart.bind(this);
     this.onDragEnter = this.onDragEnter.bind(this);
@@ -59,20 +60,18 @@ class ReactDragListView extends Component {
     }
   }
 
-  onMouseDown(e) {
-    const handle = this.getHandleNode(e.target);
-    if (handle) {
-      const target = (!this.props.handleSelector || this.props.handleSelector
-          === this.props.nodeSelector)
-        ? handle
-        : this.getDragNode(handle);
-      if (target) {
-        handle.setAttribute('draggable', false);
-        target.setAttribute('draggable', true);
-        target.ondragstart = this.onDragStart;
-        target.ondragend = this.onDragEnd;
-      }
+  onTouchStart(e) {
+    if (!isTouchScreen()) {
+      return;
     }
+    this.startDrag(e);
+  }
+
+  onMouseDown(e) {
+    if (isTouchScreen()) {
+      return;
+    }
+    this.startDrag(e);
   }
 
   onDragStart(e) {
@@ -148,6 +147,22 @@ class ReactDragListView extends Component {
     }
     this.dragLine.className = this.props.lineClassName || '';
     return this.dragLine;
+  }
+
+  startDrag(e) {
+    const handle = this.getHandleNode(e.target);
+    if (handle) {
+      const target = (!this.props.handleSelector || this.props.handleSelector
+          === this.props.nodeSelector)
+        ? handle
+        : this.getDragNode(handle);
+      if (target) {
+        handle.setAttribute('draggable', false);
+        target.setAttribute('draggable', true);
+        target.ondragstart = this.onDragStart;
+        target.ondragend = this.onDragEnd;
+      }
+    }
   }
 
   resolveAutoScroll(e, target) {
@@ -233,7 +248,7 @@ class ReactDragListView extends Component {
 
   render() {
     return (
-      <div role="presentation" onMouseDown={this.onMouseDown} ref={(c) => { this.dragList = c; }}>
+      <div role="presentation" onTouchStart={this.onTouchStart} onMouseDown={this.onMouseDown} ref={(c) => { this.dragList = c; }}>
         {this.props.children}
       </div>
     );

@@ -47,4 +47,8 @@ const getDomIndex = function(el, ignoreSelectors) {
     .indexOf(el);
 };
 
-export { getScrollElement, closest, getDomIndex };
+const isTouchScreen = function() {
+  return window.navigator.maxTouchPoints > 0;
+};
+
+export { getScrollElement, closest, getDomIndex, isTouchScreen };

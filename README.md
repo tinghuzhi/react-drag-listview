@@ -17,6 +17,16 @@ React drag list component.
 
 [![rc-table](https://nodei.co/npm/react-drag-listview.png)](https://npmjs.org/package/react-drag-listview)
 
+
+## Use on mobile (touch) devices
+
+* `react-drag-listview` already supports mobile (touch) devices, which can be easily implemented based on the [dragdroptouch](https://github.com/Bernardo-Castilho/dragdroptouch) polyfill
+* Need to manually add polyfill `dragdroptouch` to your website. e.g.
+  ```html
+  <script id="DragDropTouch" src="https://bernardo-castilho.github.io/DragDropTouch/DragDropTouch.js"></script>
+  ```
+* Example: [Drag on mobile devices](https://codepen.io/raisezhang/pen/wvpVbQO)
+
 ## Example
 
 * ###### Drag Rows
