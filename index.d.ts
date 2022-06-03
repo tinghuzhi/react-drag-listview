@@ -15,6 +15,8 @@ export interface DragListViewProps {
   scrollSpeed?: number | undefined;
   // get dragLine's className, css properties must be use !important
   lineClassName?: string | undefined;
+  // children
+  children?: React.ReactNode
 }
 
 declare class ReactDragListView extends React.Component<DragListViewProps> {
