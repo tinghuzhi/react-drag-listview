@@ -33,7 +33,7 @@ React drag list component.
     * [Simple dragging demo](https://raisezhang.github.io/react-drag-listview/examples/simple.html)
     * [Dragging Ant-Design table](https://codepen.io/raisezhang/pen/MmjypX)
     * [Dragging Ant-Design table width expanded rows](https://codepen.io/raisezhang/pen/OrrGJL)
-    * [Dragging Ant-Design transfer items](https://codepen.io/opaulochaves/pen/qgeVLR)
+    * [Dragging Ant-Design transfer items](https://codepen.io/raisezhang/pen/rNdGEzN)
     * [Dragging Ant-Design Nested List Items](https://codesandbox.io/s/react-drag-listview-nested-drag-example-mdrbh?file=/src/questions.js)
 
 * ###### Drag Columns
