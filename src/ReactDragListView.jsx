@@ -49,8 +49,6 @@ class ReactDragListView extends Component {
     this.scrollElement = null;
     this.scrollTimerId = -1;
     this.direction = DIRECTIONS.BOTTOM;
-
-    this.flagDragStart = false;
   }
 
   componentWillUnmount() {
@@ -62,14 +60,7 @@ class ReactDragListView extends Component {
   }
 
   onMouseDown(e) {
-    if (this.flagDragStart) {
-      return;
-    }
-    this.flagDragStart = true;
     this.startDrag(e);
-    setTimeout(() => {
-      this.flagDragStart = false;
-    }, 350);
   }
 
   onDragStart(e) {
@@ -246,7 +237,8 @@ class ReactDragListView extends Component {
 
   render() {
     return (
-      <div role="presentation" onTouchStart={this.onMouseDown} onMouseDown={this.onMouseDown} ref={(c) => { this.dragList = c; }}>
+      // eslint-disable-next-line react/no-unknown-property
+      <div role="presentation" onPointerDown={this.onMouseDown} ref={(c) => { this.dragList = c; }}>
         {this.props.children}
       </div>
     );
