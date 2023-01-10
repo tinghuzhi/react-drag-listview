@@ -7,7 +7,7 @@ import './index.less';
 
 // Import only if you need to support touch screen devices
 // https://bernardo-castilho.github.io/DragDropTouch/DragDropTouch.js
-import './DragDropTouch.js';
+import '../plugins/DragDropTouch.js';
 
 class Demo extends React.Component {
   constructor(props) {

@@ -8,7 +8,7 @@ import './dragColumn.less';
 
 // Import only if you need to support touch screen devices
 // https://bernardo-castilho.github.io/DragDropTouch/DragDropTouch.js
-import './DragDropTouch.js';
+import '../plugins/DragDropTouch.js';
 
 const { DragColumn } = ReactDragListView;
 
