@@ -1,14 +1,14 @@
 webpackJsonp([1],{
 
-/***/ 130:
+/***/ 131:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(131);
+module.exports = __webpack_require__(132);
 
 
 /***/ }),
 
-/***/ 131:
+/***/ 132:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -30,6 +30,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react_drag_listview_src_index_js__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__index_less__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__index_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__index_less__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__plugins_DragDropTouch_js__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__plugins_DragDropTouch_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__plugins_DragDropTouch_js__);
 
 
 
@@ -39,6 +41,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+
+
+
+// Import only if you need to support touch screen devices
+// https://bernardo-castilho.github.io/DragDropTouch/DragDropTouch.js
 
 
 var Demo = function (_React$Component) {
@@ -101,8 +108,8 @@ var Demo = function (_React$Component) {
                   item.title,
                   __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
                     'a',
-                    { href: '#' },
-                    'Drag'
+                    null,
+                    'Start Drag'
                   )
                 );
               })
@@ -120,5 +127,5 @@ __WEBPACK_IMPORTED_MODULE_6_react_dom___default.a.render(__WEBPACK_IMPORTED_MODU
 
 /***/ })
 
-},[130]);
+},[131]);
 //# sourceMappingURL=simple.js.map

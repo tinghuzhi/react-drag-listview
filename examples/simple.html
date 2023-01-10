@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>simple.js - example - react-drag-listview@0.2.1</title>
+  <title>simple.js - example - react-drag-listview@0.2.2</title>
   <meta name="viewport"
         content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
   <meta charset="utf-8"/>
@@ -263,7 +263,7 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
 <body>
   <div class="container">
     <div class="header">
-      <h1>react-drag-listview@0.2.1</h1>
+      <h1>react-drag-listview@0.2.2</h1>
 
       <p>drag list view and table view component for react</p>
     </div>
@@ -273,7 +273,12 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactDragListView from 'react-drag-listview/lib/index.js';
+
 import './index.less';
+
+// Import only if you need to support touch screen devices
+// https://bernardo-castilho.github.io/DragDropTouch/DragDropTouch.js
+import '../plugins/DragDropTouch.js';
 
 class Demo extends React.Component {
   constructor(props) {
@@ -311,7 +316,7 @@ class Demo extends React.Component {
               {this.state.data.map((item, index) =&gt; (
                 &lt;li key={index}&gt;
                   {item.title}
-                  &lt;a href="#"&gt;Drag&lt;/a&gt;
+                  &lt;a&gt;Start Drag&lt;/a&gt;
                 &lt;/li&gt;
             ))}
             &lt;/ol&gt;

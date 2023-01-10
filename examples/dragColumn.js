@@ -1,21 +1,21 @@
 webpackJsonp([0],{
 
-/***/ 129:
+/***/ 130:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 61:
+/***/ 62:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(62);
+module.exports = __webpack_require__(63);
 
 
 /***/ }),
 
-/***/ 62:
+/***/ 63:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -37,8 +37,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react_drag_listview_src_index_js__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__index_less__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__index_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__index_less__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__dragColumn_less__ = __webpack_require__(129);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__dragColumn_less__ = __webpack_require__(130);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__dragColumn_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__dragColumn_less__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__plugins_DragDropTouch_js__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__plugins_DragDropTouch_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__plugins_DragDropTouch_js__);
 
 
 
@@ -50,6 +52,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+
+
+// Import only if you need to support touch screen devices
+// https://bernardo-castilho.github.io/DragDropTouch/DragDropTouch.js
 
 
 var DragColumn = __WEBPACK_IMPORTED_MODULE_7_react_drag_listview_src_index_js__["a" /* default */].DragColumn;
@@ -114,7 +120,7 @@ var Demo = function (_React$Component) {
                   item.title,
                   __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
                     'a',
-                    { href: '#' },
+                    null,
                     'Drag'
                   )
                 );
@@ -133,5 +139,5 @@ __WEBPACK_IMPORTED_MODULE_6_react_dom___default.a.render(__WEBPACK_IMPORTED_MODU
 
 /***/ })
 
-},[61]);
+},[62]);
 //# sourceMappingURL=dragColumn.js.map

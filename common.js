@@ -440,7 +440,7 @@ module.exports = function (it, key) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // to indexed object, toObject with fallback for non-array-like ES3 strings
-var IObject = __webpack_require__(69);
+var IObject = __webpack_require__(70);
 var defined = __webpack_require__(25);
 module.exports = function (it) {
   return IObject(defined(it));
@@ -523,9 +523,9 @@ module.exports = {};
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(106);
-} else {
   module.exports = __webpack_require__(107);
+} else {
+  module.exports = __webpack_require__(108);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -680,7 +680,7 @@ exports.default = function (instance, Constructor) {
 
 exports.__esModule = true;
 
-var _defineProperty = __webpack_require__(80);
+var _defineProperty = __webpack_require__(81);
 
 var _defineProperty2 = _interopRequireDefault(_defineProperty);
 
@@ -736,11 +736,11 @@ exports.default = function (self, call) {
 
 exports.__esModule = true;
 
-var _setPrototypeOf = __webpack_require__(99);
+var _setPrototypeOf = __webpack_require__(100);
 
 var _setPrototypeOf2 = _interopRequireDefault(_setPrototypeOf);
 
-var _create = __webpack_require__(103);
+var _create = __webpack_require__(104);
 
 var _create2 = _interopRequireDefault(_create);
 
@@ -794,7 +794,7 @@ module.exports = function (it) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // optional / simple context binding
-var aFunction = __webpack_require__(66);
+var aFunction = __webpack_require__(67);
 module.exports = function (fn, that, length) {
   aFunction(fn);
   if (that === undefined) return fn;
@@ -839,7 +839,7 @@ module.exports = function (it, S) {
 
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
 var anObject = __webpack_require__(10);
-var dPs = __webpack_require__(68);
+var dPs = __webpack_require__(69);
 var enumBugKeys = __webpack_require__(33);
 var IE_PROTO = __webpack_require__(31)('IE_PROTO');
 var Empty = function () { /* empty */ };
@@ -854,7 +854,7 @@ var createDict = function () {
   var gt = '>';
   var iframeDocument;
   iframe.style.display = 'none';
-  __webpack_require__(72).appendChild(iframe);
+  __webpack_require__(73).appendChild(iframe);
   iframe.src = 'javascript:'; // eslint-disable-line no-script-url
   // createDict = iframe.contentWindow.Object;
   // html.removeChild(iframe);
@@ -1146,7 +1146,7 @@ module.exports = ReactPropTypesSecret;
 
 exports.__esModule = true;
 
-var _from = __webpack_require__(63);
+var _from = __webpack_require__(64);
 
 var _from2 = _interopRequireDefault(_from);
 
@@ -1170,7 +1170,7 @@ exports.default = function (arr) {
 
 "use strict";
 
-var $at = __webpack_require__(65)(true);
+var $at = __webpack_require__(66)(true);
 
 // 21.1.3.27 String.prototype[@@iterator]()
 __webpack_require__(43)(String, 'String', function (iterated) {
@@ -1199,7 +1199,7 @@ var $export = __webpack_require__(5);
 var redefine = __webpack_require__(46);
 var hide = __webpack_require__(9);
 var Iterators = __webpack_require__(14);
-var $iterCreate = __webpack_require__(67);
+var $iterCreate = __webpack_require__(68);
 var setToStringTag = __webpack_require__(34);
 var getPrototypeOf = __webpack_require__(49);
 var ITERATOR = __webpack_require__(2)('iterator');
@@ -1299,7 +1299,7 @@ module.exports = __webpack_require__(9);
 
 var has = __webpack_require__(7);
 var toIObject = __webpack_require__(8);
-var arrayIndexOf = __webpack_require__(70)(false);
+var arrayIndexOf = __webpack_require__(71)(false);
 var IE_PROTO = __webpack_require__(31)('IE_PROTO');
 
 module.exports = function (object, names) {
@@ -1356,11 +1356,11 @@ module.exports = Object.getPrototypeOf || function (O) {
 
 exports.__esModule = true;
 
-var _iterator = __webpack_require__(83);
+var _iterator = __webpack_require__(84);
 
 var _iterator2 = _interopRequireDefault(_iterator);
 
-var _symbol = __webpack_require__(89);
+var _symbol = __webpack_require__(90);
 
 var _symbol2 = _interopRequireDefault(_symbol);
 
@@ -1440,9 +1440,9 @@ if (process.env.NODE_ENV === 'production') {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = __webpack_require__(108);
+  module.exports = __webpack_require__(109);
 } else {
-  module.exports = __webpack_require__(111);
+  module.exports = __webpack_require__(112);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -1455,9 +1455,9 @@ if (process.env.NODE_ENV === 'production') {
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(109);
-} else {
   module.exports = __webpack_require__(110);
+} else {
+  module.exports = __webpack_require__(111);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -1468,12 +1468,14 @@ if (process.env.NODE_ENV === 'production') {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ReactDragListView__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ReactDragColumnView__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ReactDragColumnView__ = __webpack_require__(122);
 
 
 
 __WEBPACK_IMPORTED_MODULE_0__ReactDragListView__["a" /* default */].DragColumn = __WEBPACK_IMPORTED_MODULE_1__ReactDragColumnView__["a" /* default */];
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0__ReactDragListView__["a" /* default */]);
+
+// build node version: 11.15.0
 
 /***/ }),
 /* 57 */
@@ -1490,9 +1492,9 @@ __WEBPACK_IMPORTED_MODULE_0__ReactDragListView__["a" /* default */].DragColumn =
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_prop_types__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_prop_types__ = __webpack_require__(116);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__util__ = __webpack_require__(120);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__util__ = __webpack_require__(121);
 
 
 
@@ -1517,7 +1519,6 @@ var ReactDragListView = function (_Component) {
 
     var _this = __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (ReactDragListView.__proto__ || Object.getPrototypeOf(ReactDragListView)).call(this, props));
 
-    _this.onTouchStart = _this.onTouchStart.bind(_this);
     _this.onMouseDown = _this.onMouseDown.bind(_this);
     _this.onDragStart = _this.onDragStart.bind(_this);
     _this.onDragEnter = _this.onDragEnter.bind(_this);
@@ -1532,6 +1533,8 @@ var ReactDragListView = function (_Component) {
     _this.scrollElement = null;
     _this.scrollTimerId = -1;
     _this.direction = DIRECTIONS.BOTTOM;
+
+    _this.flagDragStart = false;
     return _this;
   }
 
@@ -1545,20 +1548,18 @@ var ReactDragListView = function (_Component) {
       }
     }
   }, {
-    key: 'onTouchStart',
-    value: function onTouchStart(e) {
-      if (!Object(__WEBPACK_IMPORTED_MODULE_6__util__["d" /* isTouchScreen */])()) {
-        return;
-      }
-      this.startDrag(e);
-    }
-  }, {
     key: 'onMouseDown',
     value: function onMouseDown(e) {
-      if (Object(__WEBPACK_IMPORTED_MODULE_6__util__["d" /* isTouchScreen */])()) {
+      var _this2 = this;
+
+      if (this.flagDragStart) {
         return;
       }
+      this.flagDragStart = true;
       this.startDrag(e);
+      setTimeout(function () {
+        _this2.flagDragStart = false;
+      }, 350);
     }
   }, {
     key: 'onDragStart',
@@ -1748,12 +1749,12 @@ var ReactDragListView = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _this2 = this;
+      var _this3 = this;
 
       return __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
         'div',
-        { role: 'presentation', onTouchStart: this.onTouchStart, onMouseDown: this.onMouseDown, ref: function ref(c) {
-            _this2.dragList = c;
+        { role: 'presentation', onTouchStart: this.onMouseDown, onMouseDown: this.onMouseDown, ref: function ref(c) {
+            _this3.dragList = c;
           } },
         this.props.children
       );
@@ -1794,9 +1795,9 @@ ReactDragListView.defaultProps = {
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(116);
-} else {
   module.exports = __webpack_require__(117);
+} else {
+  module.exports = __webpack_require__(118);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -1824,24 +1825,483 @@ module.exports = function (KEY, exec) {
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 61 */,
-/* 62 */,
-/* 63 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 61 */
+/***/ (function(module, exports) {
 
-module.exports = { "default": __webpack_require__(64), __esModule: true };
+/* eslint-disable */
+var DragDropTouch;
+(function (DragDropTouch_1) {
+    'use strict';
+    /**
+     * Object used to hold the data that is being dragged during drag and drop operations.
+     *
+     * It may hold one or more data items of different types. For more information about
+     * drag and drop operations and data transfer objects, see
+     * <a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer">HTML Drag and Drop API</a>.
+     *
+     * This object is created automatically by the @see:DragDropTouch singleton and is
+     * accessible through the @see:dataTransfer property of all drag events.
+     */
+
+    var DataTransfer = function () {
+        function DataTransfer() {
+            this._dropEffect = 'move';
+            this._effectAllowed = 'all';
+            this._data = {};
+        }
+        Object.defineProperty(DataTransfer.prototype, "dropEffect", {
+            /**
+             * Gets or sets the type of drag-and-drop operation currently selected.
+             * The value must be 'none',  'copy',  'link', or 'move'.
+             */
+            get: function get() {
+                return this._dropEffect;
+            },
+            set: function set(value) {
+                this._dropEffect = value;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(DataTransfer.prototype, "effectAllowed", {
+            /**
+             * Gets or sets the types of operations that are possible.
+             * Must be one of 'none', 'copy', 'copyLink', 'copyMove', 'link',
+             * 'linkMove', 'move', 'all' or 'uninitialized'.
+             */
+            get: function get() {
+                return this._effectAllowed;
+            },
+            set: function set(value) {
+                this._effectAllowed = value;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(DataTransfer.prototype, "types", {
+            /**
+             * Gets an array of strings giving the formats that were set in the @see:dragstart event.
+             */
+            get: function get() {
+                return Object.keys(this._data);
+            },
+            enumerable: true,
+            configurable: true
+        });
+        /**
+         * Removes the data associated with a given type.
+         *
+         * The type argument is optional. If the type is empty or not specified, the data
+         * associated with all types is removed. If data for the specified type does not exist,
+         * or the data transfer contains no data, this method will have no effect.
+         *
+         * @param type Type of data to remove.
+         */
+        DataTransfer.prototype.clearData = function (type) {
+            if (type != null) {
+                delete this._data[type.toLowerCase()];
+            } else {
+                this._data = {};
+            }
+        };
+        /**
+         * Retrieves the data for a given type, or an empty string if data for that type does
+         * not exist or the data transfer contains no data.
+         *
+         * @param type Type of data to retrieve.
+         */
+        DataTransfer.prototype.getData = function (type) {
+            return this._data[type.toLowerCase()] || '';
+        };
+        /**
+         * Set the data for a given type.
+         *
+         * For a list of recommended drag types, please see
+         * https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Recommended_Drag_Types.
+         *
+         * @param type Type of data to add.
+         * @param value Data to add.
+         */
+        DataTransfer.prototype.setData = function (type, value) {
+            this._data[type.toLowerCase()] = value;
+        };
+        /**
+         * Set the image to be used for dragging if a custom one is desired.
+         *
+         * @param img An image element to use as the drag feedback image.
+         * @param offsetX The horizontal offset within the image.
+         * @param offsetY The vertical offset within the image.
+         */
+        DataTransfer.prototype.setDragImage = function (img, offsetX, offsetY) {
+            var ddt = DragDropTouch._instance;
+            ddt._imgCustom = img;
+            ddt._imgOffset = { x: offsetX, y: offsetY };
+        };
+        return DataTransfer;
+    }();
+    DragDropTouch_1.DataTransfer = DataTransfer;
+    /**
+     * Defines a class that adds support for touch-based HTML5 drag/drop operations.
+     *
+     * The @see:DragDropTouch class listens to touch events and raises the
+     * appropriate HTML5 drag/drop events as if the events had been caused
+     * by mouse actions.
+     *
+     * The purpose of this class is to enable using existing, standard HTML5
+     * drag/drop code on mobile devices running IOS or Android.
+     *
+     * To use, include the DragDropTouch.js file on the page. The class will
+     * automatically start monitoring touch events and will raise the HTML5
+     * drag drop events (dragstart, dragenter, dragleave, drop, dragend) which
+     * should be handled by the application.
+     *
+     * For details and examples on HTML drag and drop, see
+     * https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Drag_operations.
+     */
+    var DragDropTouch = function () {
+        /**
+         * Initializes the single instance of the @see:DragDropTouch class.
+         */
+        function DragDropTouch() {
+            this._lastClick = 0;
+            // enforce singleton pattern
+            if (DragDropTouch._instance) {
+                throw 'DragDropTouch instance already created.';
+            }
+            // detect passive event support
+            // https://github.com/Modernizr/Modernizr/issues/1894
+            var supportsPassive = false;
+            document.addEventListener('test', function () {}, {
+                get passive() {
+                    supportsPassive = true;
+                    return true;
+                }
+            });
+            // listen to touch events
+            if (navigator.maxTouchPoints) {
+                var d = document,
+                    ts = this._touchstart.bind(this),
+                    tm = this._touchmove.bind(this),
+                    te = this._touchend.bind(this),
+                    opt = supportsPassive ? { passive: false, capture: false } : false;
+                d.addEventListener('touchstart', ts, opt);
+                d.addEventListener('touchmove', tm, opt);
+                d.addEventListener('touchend', te);
+                d.addEventListener('touchcancel', te);
+            }
+        }
+        /**
+         * Gets a reference to the @see:DragDropTouch singleton.
+         */
+        DragDropTouch.getInstance = function () {
+            return DragDropTouch._instance;
+        };
+        // ** event handlers
+        DragDropTouch.prototype._touchstart = function (e) {
+            var _this = this;
+            if (this._shouldHandle(e)) {
+                // raise double-click and prevent zooming
+                if (Date.now() - this._lastClick < DragDropTouch._DBLCLICK) {
+                    if (this._dispatchEvent(e, 'dblclick', e.target)) {
+                        e.preventDefault();
+                        this._reset();
+                        return;
+                    }
+                }
+                // clear all variables
+                this._reset();
+                // get nearest draggable element
+                var src = this._closestDraggable(e.target);
+                if (src) {
+                    // give caller a chance to handle the hover/move events
+                    if (!this._dispatchEvent(e, 'mousemove', e.target) && !this._dispatchEvent(e, 'mousedown', e.target)) {
+                        // get ready to start dragging
+                        this._dragSource = src;
+                        this._ptDown = this._getPoint(e);
+                        this._lastTouch = e;
+                        e.preventDefault();
+                        // show context menu if the user hasn't started dragging after a while
+                        setTimeout(function () {
+                            if (_this._dragSource == src && _this._img == null) {
+                                if (_this._dispatchEvent(e, 'contextmenu', src)) {
+                                    _this._reset();
+                                }
+                            }
+                        }, DragDropTouch._CTXMENU);
+                        if (DragDropTouch._ISPRESSHOLDMODE) {
+                            this._pressHoldInterval = setTimeout(function () {
+                                _this._isDragEnabled = true;
+                                _this._touchmove(e);
+                            }, DragDropTouch._PRESSHOLDAWAIT);
+                        }
+                    }
+                }
+            }
+        };
+        DragDropTouch.prototype._touchmove = function (e) {
+            if (this._shouldCancelPressHoldMove(e)) {
+                this._reset();
+                return;
+            }
+            if (this._shouldHandleMove(e) || this._shouldHandlePressHoldMove(e)) {
+                // see if target wants to handle move
+                var target = this._getTarget(e);
+                if (this._dispatchEvent(e, 'mousemove', target)) {
+                    this._lastTouch = e;
+                    e.preventDefault();
+                    return;
+                }
+                // start dragging
+                if (this._dragSource && !this._img && this._shouldStartDragging(e)) {
+                    this._dispatchEvent(e, 'dragstart', this._dragSource);
+                    this._createImage(e);
+                    this._dispatchEvent(e, 'dragenter', target);
+                }
+                // continue dragging
+                if (this._img) {
+                    this._lastTouch = e;
+                    e.preventDefault(); // prevent scrolling
+                    this._dispatchEvent(e, 'drag', this._dragSource);
+                    if (target != this._lastTarget) {
+                        this._dispatchEvent(this._lastTouch, 'dragleave', this._lastTarget);
+                        this._dispatchEvent(e, 'dragenter', target);
+                        this._lastTarget = target;
+                    }
+                    this._moveImage(e);
+                    this._isDropZone = this._dispatchEvent(e, 'dragover', target);
+                }
+            }
+        };
+        DragDropTouch.prototype._touchend = function (e) {
+            if (this._shouldHandle(e)) {
+                // see if target wants to handle up
+                if (this._dispatchEvent(this._lastTouch, 'mouseup', e.target)) {
+                    e.preventDefault();
+                    return;
+                }
+                // user clicked the element but didn't drag, so clear the source and simulate a click
+                if (!this._img) {
+                    this._dragSource = null;
+                    this._dispatchEvent(this._lastTouch, 'click', e.target);
+                    this._lastClick = Date.now();
+                }
+                // finish dragging
+                this._destroyImage();
+                if (this._dragSource) {
+                    if (e.type.indexOf('cancel') < 0 && this._isDropZone) {
+                        this._dispatchEvent(this._lastTouch, 'drop', this._lastTarget);
+                    }
+                    this._dispatchEvent(this._lastTouch, 'dragend', this._dragSource);
+                    this._reset();
+                }
+            }
+        };
+        // ** utilities
+        // ignore events that have been handled or that involve more than one touch
+        DragDropTouch.prototype._shouldHandle = function (e) {
+            return e && !e.defaultPrevented && e.touches && e.touches.length < 2;
+        };
+
+        // use regular condition outside of press & hold mode
+        DragDropTouch.prototype._shouldHandleMove = function (e) {
+            return !DragDropTouch._ISPRESSHOLDMODE && this._shouldHandle(e);
+        };
+
+        // allow to handle moves that involve many touches for press & hold
+        DragDropTouch.prototype._shouldHandlePressHoldMove = function (e) {
+            return DragDropTouch._ISPRESSHOLDMODE && this._isDragEnabled && e && e.touches && e.touches.length;
+        };
+
+        // reset data if user drags without pressing & holding
+        DragDropTouch.prototype._shouldCancelPressHoldMove = function (e) {
+            return DragDropTouch._ISPRESSHOLDMODE && !this._isDragEnabled && this._getDelta(e) > DragDropTouch._PRESSHOLDMARGIN;
+        };
+
+        // start dragging when specified delta is detected
+        DragDropTouch.prototype._shouldStartDragging = function (e) {
+            var delta = this._getDelta(e);
+            return delta > DragDropTouch._THRESHOLD || DragDropTouch._ISPRESSHOLDMODE && delta >= DragDropTouch._PRESSHOLDTHRESHOLD;
+        };
+
+        // clear all members
+        DragDropTouch.prototype._reset = function () {
+            this._destroyImage();
+            this._dragSource = null;
+            this._lastTouch = null;
+            this._lastTarget = null;
+            this._ptDown = null;
+            this._isDragEnabled = false;
+            this._isDropZone = false;
+            this._dataTransfer = new DataTransfer();
+            clearInterval(this._pressHoldInterval);
+        };
+        // get point for a touch event
+        DragDropTouch.prototype._getPoint = function (e, page) {
+            if (e && e.touches) {
+                e = e.touches[0];
+            }
+            return { x: page ? e.pageX : e.clientX, y: page ? e.pageY : e.clientY };
+        };
+        // get distance between the current touch event and the first one
+        DragDropTouch.prototype._getDelta = function (e) {
+            if (DragDropTouch._ISPRESSHOLDMODE && !this._ptDown) {
+                return 0;
+            }
+            var p = this._getPoint(e);
+            return Math.abs(p.x - this._ptDown.x) + Math.abs(p.y - this._ptDown.y);
+        };
+        // get the element at a given touch event
+        DragDropTouch.prototype._getTarget = function (e) {
+            var pt = this._getPoint(e),
+                el = document.elementFromPoint(pt.x, pt.y);
+            while (el && getComputedStyle(el).pointerEvents == 'none') {
+                el = el.parentElement;
+            }
+            return el;
+        };
+        // create drag image from source element
+        DragDropTouch.prototype._createImage = function (e) {
+            // just in case...
+            if (this._img) {
+                this._destroyImage();
+            }
+            // create drag image from custom element or drag source
+            var src = this._imgCustom || this._dragSource;
+            this._img = src.cloneNode(true);
+            this._copyStyle(src, this._img);
+            this._img.style.top = this._img.style.left = '-9999px';
+            // if creating from drag source, apply offset and opacity
+            if (!this._imgCustom) {
+                var rc = src.getBoundingClientRect(),
+                    pt = this._getPoint(e);
+                this._imgOffset = { x: pt.x - rc.left, y: pt.y - rc.top };
+                this._img.style.opacity = DragDropTouch._OPACITY.toString();
+            }
+            // add image to document
+            this._moveImage(e);
+            document.body.appendChild(this._img);
+        };
+        // dispose of drag image element
+        DragDropTouch.prototype._destroyImage = function () {
+            if (this._img && this._img.parentElement) {
+                this._img.parentElement.removeChild(this._img);
+            }
+            this._img = null;
+            this._imgCustom = null;
+        };
+        // move the drag image element
+        DragDropTouch.prototype._moveImage = function (e) {
+            var _this = this;
+            requestAnimationFrame(function () {
+                if (_this._img) {
+                    var pt = _this._getPoint(e, true),
+                        s = _this._img.style;
+                    s.position = 'absolute';
+                    s.pointerEvents = 'none';
+                    s.zIndex = '999999';
+                    s.left = Math.round(pt.x - _this._imgOffset.x) + 'px';
+                    s.top = Math.round(pt.y - _this._imgOffset.y) + 'px';
+                }
+            });
+        };
+        // copy properties from an object to another
+        DragDropTouch.prototype._copyProps = function (dst, src, props) {
+            for (var i = 0; i < props.length; i++) {
+                var p = props[i];
+                dst[p] = src[p];
+            }
+        };
+        DragDropTouch.prototype._copyStyle = function (src, dst) {
+            // remove potentially troublesome attributes
+            DragDropTouch._rmvAtts.forEach(function (att) {
+                dst.removeAttribute(att);
+            });
+            // copy canvas content
+            if (src instanceof HTMLCanvasElement) {
+                var cSrc = src,
+                    cDst = dst;
+                cDst.width = cSrc.width;
+                cDst.height = cSrc.height;
+                cDst.getContext('2d').drawImage(cSrc, 0, 0);
+            }
+            // copy style (without transitions)
+            var cs = getComputedStyle(src);
+            for (var i = 0; i < cs.length; i++) {
+                var key = cs[i];
+                if (key.indexOf('transition') < 0) {
+                    dst.style[key] = cs[key];
+                }
+            }
+            dst.style.pointerEvents = 'none';
+            // and repeat for all children
+            for (var i = 0; i < src.children.length; i++) {
+                this._copyStyle(src.children[i], dst.children[i]);
+            }
+        };
+        DragDropTouch.prototype._dispatchEvent = function (e, type, target) {
+            if (e && target) {
+                var evt = document.createEvent('Event'),
+                    t = e.touches ? e.touches[0] : e;
+                evt.initEvent(type, true, true);
+                evt.button = 0;
+                evt.which = evt.buttons = 1;
+                this._copyProps(evt, e, DragDropTouch._kbdProps);
+                this._copyProps(evt, t, DragDropTouch._ptProps);
+                evt.dataTransfer = this._dataTransfer;
+                target.dispatchEvent(evt);
+                return evt.defaultPrevented;
+            }
+            return false;
+        };
+        // gets an element's closest draggable ancestor
+        DragDropTouch.prototype._closestDraggable = function (e) {
+            for (; e; e = e.parentElement) {
+                if (e.hasAttribute('draggable') && e.draggable) {
+                    return e;
+                }
+            }
+            return null;
+        };
+        return DragDropTouch;
+    }();
+    /*private*/DragDropTouch._instance = new DragDropTouch(); // singleton
+    // constants
+    DragDropTouch._THRESHOLD = 5; // pixels to move before drag starts
+    DragDropTouch._OPACITY = 0.5; // drag image opacity
+    DragDropTouch._DBLCLICK = 500; // max ms between clicks in a double click
+    DragDropTouch._CTXMENU = 900; // ms to hold before raising 'contextmenu' event
+    DragDropTouch._ISPRESSHOLDMODE = false; // decides of press & hold mode presence
+    DragDropTouch._PRESSHOLDAWAIT = 400; // ms to wait before press & hold is detected
+    DragDropTouch._PRESSHOLDMARGIN = 25; // pixels that finger might shiver while pressing
+    DragDropTouch._PRESSHOLDTHRESHOLD = 0; // pixels to move before drag starts
+    // copy styles/attributes from drag source to drag image element
+    DragDropTouch._rmvAtts = 'id,class,style,draggable'.split(',');
+    // synthesize and dispatch an event
+    // returns true if the event has been handled (e.preventDefault == true)
+    DragDropTouch._kbdProps = 'altKey,ctrlKey,metaKey,shiftKey'.split(',');
+    DragDropTouch._ptProps = 'pageX,pageY,clientX,clientY,screenX,screenY,offsetX,offsetY'.split(',');
+    DragDropTouch_1.DragDropTouch = DragDropTouch;
+})(DragDropTouch || (DragDropTouch = {}));
 
 /***/ }),
+/* 62 */,
+/* 63 */,
 /* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
+module.exports = { "default": __webpack_require__(65), __esModule: true };
+
+/***/ }),
+/* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
 __webpack_require__(42);
-__webpack_require__(73);
+__webpack_require__(74);
 module.exports = __webpack_require__(1).Array.from;
 
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var toInteger = __webpack_require__(24);
@@ -1864,7 +2324,7 @@ module.exports = function (TO_STRING) {
 
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports) {
 
 module.exports = function (it) {
@@ -1874,7 +2334,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 67 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1894,7 +2354,7 @@ module.exports = function (Constructor, NAME, next) {
 
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var dP = __webpack_require__(4);
@@ -1913,7 +2373,7 @@ module.exports = __webpack_require__(6) ? Object.defineProperties : function def
 
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // fallback for non-array-like ES3 and non-enumerable old V8 strings
@@ -1925,14 +2385,14 @@ module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
 
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // false -> Array#indexOf
 // true  -> Array#includes
 var toIObject = __webpack_require__(8);
 var toLength = __webpack_require__(48);
-var toAbsoluteIndex = __webpack_require__(71);
+var toAbsoluteIndex = __webpack_require__(72);
 module.exports = function (IS_INCLUDES) {
   return function ($this, el, fromIndex) {
     var O = toIObject($this);
@@ -1954,7 +2414,7 @@ module.exports = function (IS_INCLUDES) {
 
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var toInteger = __webpack_require__(24);
@@ -1967,7 +2427,7 @@ module.exports = function (index, length) {
 
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var document = __webpack_require__(3).document;
@@ -1975,7 +2435,7 @@ module.exports = document && document.documentElement;
 
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1983,13 +2443,13 @@ module.exports = document && document.documentElement;
 var ctx = __webpack_require__(26);
 var $export = __webpack_require__(5);
 var toObject = __webpack_require__(19);
-var call = __webpack_require__(74);
-var isArrayIter = __webpack_require__(75);
+var call = __webpack_require__(75);
+var isArrayIter = __webpack_require__(76);
 var toLength = __webpack_require__(48);
-var createProperty = __webpack_require__(76);
-var getIterFn = __webpack_require__(77);
+var createProperty = __webpack_require__(77);
+var getIterFn = __webpack_require__(78);
 
-$export($export.S + $export.F * !__webpack_require__(79)(function (iter) { Array.from(iter); }), 'Array', {
+$export($export.S + $export.F * !__webpack_require__(80)(function (iter) { Array.from(iter); }), 'Array', {
   // 22.1.2.1 Array.from(arrayLike, mapfn = undefined, thisArg = undefined)
   from: function from(arrayLike /* , mapfn = undefined, thisArg = undefined */) {
     var O = toObject(arrayLike);
@@ -2019,7 +2479,7 @@ $export($export.S + $export.F * !__webpack_require__(79)(function (iter) { Array
 
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // call something on iterator step with safe closing on error
@@ -2037,7 +2497,7 @@ module.exports = function (iterator, fn, value, entries) {
 
 
 /***/ }),
-/* 75 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // check on default Array iterator
@@ -2051,7 +2511,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 76 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2066,10 +2526,10 @@ module.exports = function (object, index, value) {
 
 
 /***/ }),
-/* 77 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var classof = __webpack_require__(78);
+var classof = __webpack_require__(79);
 var ITERATOR = __webpack_require__(2)('iterator');
 var Iterators = __webpack_require__(14);
 module.exports = __webpack_require__(1).getIteratorMethod = function (it) {
@@ -2080,7 +2540,7 @@ module.exports = __webpack_require__(1).getIteratorMethod = function (it) {
 
 
 /***/ }),
-/* 78 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // getting tag from 19.1.3.6 Object.prototype.toString()
@@ -2109,7 +2569,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 79 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var ITERATOR = __webpack_require__(2)('iterator');
@@ -2137,16 +2597,16 @@ module.exports = function (exec, skipClosing) {
 
 
 /***/ }),
-/* 80 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(81), __esModule: true };
-
-/***/ }),
 /* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(82);
+module.exports = { "default": __webpack_require__(82), __esModule: true };
+
+/***/ }),
+/* 82 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(83);
 var $Object = __webpack_require__(1).Object;
 module.exports = function defineProperty(it, key, desc) {
   return $Object.defineProperty(it, key, desc);
@@ -2154,7 +2614,7 @@ module.exports = function defineProperty(it, key, desc) {
 
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(5);
@@ -2163,25 +2623,25 @@ $export($export.S + $export.F * !__webpack_require__(6), 'Object', { definePrope
 
 
 /***/ }),
-/* 83 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(84), __esModule: true };
-
-/***/ }),
 /* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(42);
-__webpack_require__(85);
-module.exports = __webpack_require__(35).f('iterator');
-
+module.exports = { "default": __webpack_require__(85), __esModule: true };
 
 /***/ }),
 /* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(42);
 __webpack_require__(86);
+module.exports = __webpack_require__(35).f('iterator');
+
+
+/***/ }),
+/* 86 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(87);
 var global = __webpack_require__(3);
 var hide = __webpack_require__(9);
 var Iterators = __webpack_require__(14);
@@ -2203,13 +2663,13 @@ for (var i = 0; i < DOMIterables.length; i++) {
 
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var addToUnscopables = __webpack_require__(87);
-var step = __webpack_require__(88);
+var addToUnscopables = __webpack_require__(88);
+var step = __webpack_require__(89);
 var Iterators = __webpack_require__(14);
 var toIObject = __webpack_require__(8);
 
@@ -2244,14 +2704,14 @@ addToUnscopables('entries');
 
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, exports) {
 
 module.exports = function () { /* empty */ };
 
 
 /***/ }),
-/* 88 */
+/* 89 */
 /***/ (function(module, exports) {
 
 module.exports = function (done, value) {
@@ -2260,24 +2720,24 @@ module.exports = function (done, value) {
 
 
 /***/ }),
-/* 89 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(90), __esModule: true };
-
-/***/ }),
 /* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(91);
-__webpack_require__(96);
+module.exports = { "default": __webpack_require__(91), __esModule: true };
+
+/***/ }),
+/* 91 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(92);
 __webpack_require__(97);
 __webpack_require__(98);
+__webpack_require__(99);
 module.exports = __webpack_require__(1).Symbol;
 
 
 /***/ }),
-/* 91 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2288,7 +2748,7 @@ var has = __webpack_require__(7);
 var DESCRIPTORS = __webpack_require__(6);
 var $export = __webpack_require__(5);
 var redefine = __webpack_require__(46);
-var META = __webpack_require__(92).KEY;
+var META = __webpack_require__(93).KEY;
 var $fails = __webpack_require__(12);
 var shared = __webpack_require__(32);
 var setToStringTag = __webpack_require__(34);
@@ -2296,8 +2756,8 @@ var uid = __webpack_require__(18);
 var wks = __webpack_require__(2);
 var wksExt = __webpack_require__(35);
 var wksDefine = __webpack_require__(36);
-var enumKeys = __webpack_require__(93);
-var isArray = __webpack_require__(94);
+var enumKeys = __webpack_require__(94);
+var isArray = __webpack_require__(95);
 var anObject = __webpack_require__(10);
 var isObject = __webpack_require__(11);
 var toObject = __webpack_require__(19);
@@ -2305,7 +2765,7 @@ var toIObject = __webpack_require__(8);
 var toPrimitive = __webpack_require__(27);
 var createDesc = __webpack_require__(13);
 var _create = __webpack_require__(28);
-var gOPNExt = __webpack_require__(95);
+var gOPNExt = __webpack_require__(96);
 var $GOPD = __webpack_require__(38);
 var $GOPS = __webpack_require__(51);
 var $DP = __webpack_require__(4);
@@ -2530,7 +2990,7 @@ setToStringTag(global.JSON, 'JSON', true);
 
 
 /***/ }),
-/* 92 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var META = __webpack_require__(18)('meta');
@@ -2589,7 +3049,7 @@ var meta = module.exports = {
 
 
 /***/ }),
-/* 93 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // all enumerable object keys, includes symbols
@@ -2610,7 +3070,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 94 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.2.2 IsArray(argument)
@@ -2621,7 +3081,7 @@ module.exports = Array.isArray || function isArray(arg) {
 
 
 /***/ }),
-/* 95 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
@@ -2646,50 +3106,50 @@ module.exports.f = function getOwnPropertyNames(it) {
 
 
 /***/ }),
-/* 96 */
+/* 97 */
 /***/ (function(module, exports) {
 
-
-
-/***/ }),
-/* 97 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(36)('asyncIterator');
 
 
 /***/ }),
 /* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(36)('observable');
+__webpack_require__(36)('asyncIterator');
 
 
 /***/ }),
 /* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(100), __esModule: true };
+__webpack_require__(36)('observable');
+
 
 /***/ }),
 /* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(101);
-module.exports = __webpack_require__(1).Object.setPrototypeOf;
-
+module.exports = { "default": __webpack_require__(101), __esModule: true };
 
 /***/ }),
 /* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// 19.1.3.19 Object.setPrototypeOf(O, proto)
-var $export = __webpack_require__(5);
-$export($export.S, 'Object', { setPrototypeOf: __webpack_require__(102).set });
+__webpack_require__(102);
+module.exports = __webpack_require__(1).Object.setPrototypeOf;
 
 
 /***/ }),
 /* 102 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.3.19 Object.setPrototypeOf(O, proto)
+var $export = __webpack_require__(5);
+$export($export.S, 'Object', { setPrototypeOf: __webpack_require__(103).set });
+
+
+/***/ }),
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Works with __proto__ only. Old v8 can't work with null proto objects.
@@ -2720,16 +3180,16 @@ module.exports = {
 
 
 /***/ }),
-/* 103 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(104), __esModule: true };
-
-/***/ }),
 /* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(105);
+module.exports = { "default": __webpack_require__(105), __esModule: true };
+
+/***/ }),
+/* 105 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(106);
 var $Object = __webpack_require__(1).Object;
 module.exports = function create(P, D) {
   return $Object.create(P, D);
@@ -2737,7 +3197,7 @@ module.exports = function create(P, D) {
 
 
 /***/ }),
-/* 105 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(5);
@@ -2746,7 +3206,7 @@ $export($export.S, 'Object', { create: __webpack_require__(28) });
 
 
 /***/ }),
-/* 106 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2778,7 +3238,7 @@ exports.useLayoutEffect=function(a,b){return Z().useLayoutEffect(a,b)};exports.u
 
 
 /***/ }),
-/* 107 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4698,7 +5158,7 @@ exports.version = ReactVersion;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 108 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4997,7 +5457,7 @@ exports.unstable_renderSubtreeIntoContainer=function(a,b,c,d){if(!gk(c))throw Er
 
 
 /***/ }),
-/* 109 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5025,7 +5485,7 @@ exports.unstable_shouldYield=function(){var a=exports.unstable_now();V(a);var b=
 
 
 /***/ }),
-/* 110 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5891,7 +6351,7 @@ exports.unstable_wrapCallback = unstable_wrapCallback;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 111 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5916,7 +6376,7 @@ var React = __webpack_require__(15);
 var _assign = __webpack_require__(16);
 var Scheduler = __webpack_require__(55);
 var checkPropTypes = __webpack_require__(39);
-var tracing = __webpack_require__(112);
+var tracing = __webpack_require__(113);
 
 var ReactSharedInternals = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED; // Prevent newer renderers from RTE when used with older react package versions.
 // Current owner and dispatcher used to share the same ref,
@@ -30911,22 +31371,22 @@ exports.version = ReactVersion;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 112 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(113);
-} else {
   module.exports = __webpack_require__(114);
+} else {
+  module.exports = __webpack_require__(115);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 113 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30943,7 +31403,7 @@ var b=0;exports.__interactionsRef=null;exports.__subscriberRef=null;exports.unst
 
 
 /***/ }),
-/* 114 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31300,7 +31760,7 @@ exports.unstable_wrap = unstable_wrap;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 115 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {/**
@@ -31316,17 +31776,17 @@ if (process.env.NODE_ENV !== 'production') {
   // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(118)(ReactIs.isElement, throwOnDirectAccess);
+  module.exports = __webpack_require__(119)(ReactIs.isElement, throwOnDirectAccess);
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(119)();
+  module.exports = __webpack_require__(120)();
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 116 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31348,7 +31808,7 @@ exports.isValidElementType=function(a){return"string"===typeof a||"function"===t
 
 
 /***/ }),
-/* 117 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31537,7 +31997,7 @@ exports.typeOf = typeOf;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 118 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32155,7 +32615,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 119 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32227,14 +32687,13 @@ module.exports = function() {
 
 
 /***/ }),
-/* 120 */
+/* 121 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getScrollElement; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return closest; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getDomIndex; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return isTouchScreen; });
 /* global Element */
 
 if (typeof Element !== 'undefined' && !Element.prototype.matches) {
@@ -32281,14 +32740,14 @@ var getDomIndex = function getDomIndex(el, ignoreSelectors) {
   }).indexOf(el);
 };
 
-var isTouchScreen = function isTouchScreen() {
-  return window.navigator.maxTouchPoints > 0;
-};
+// const isTouchScreen = function() {
+//   return window.navigator.maxTouchPoints > 0;
+// };
 
 
 
 /***/ }),
-/* 121 */
+/* 122 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -32298,7 +32757,7 @@ var isTouchScreen = function isTouchScreen() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_createClass__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_get__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_get__ = __webpack_require__(123);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_get___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_get__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
@@ -32422,7 +32881,7 @@ var ReactDragColumnView = function (_ReactDragListView) {
 /* harmony default export */ __webpack_exports__["a"] = (ReactDragColumnView);
 
 /***/ }),
-/* 122 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32430,11 +32889,11 @@ var ReactDragColumnView = function (_ReactDragListView) {
 
 exports.__esModule = true;
 
-var _getPrototypeOf = __webpack_require__(123);
+var _getPrototypeOf = __webpack_require__(124);
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
 
-var _getOwnPropertyDescriptor = __webpack_require__(126);
+var _getOwnPropertyDescriptor = __webpack_require__(127);
 
 var _getOwnPropertyDescriptor2 = _interopRequireDefault(_getOwnPropertyDescriptor);
 
@@ -32466,21 +32925,21 @@ exports.default = function get(object, property, receiver) {
 };
 
 /***/ }),
-/* 123 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(124), __esModule: true };
-
-/***/ }),
 /* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(125);
+module.exports = { "default": __webpack_require__(125), __esModule: true };
+
+/***/ }),
+/* 125 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(126);
 module.exports = __webpack_require__(1).Object.getPrototypeOf;
 
 
 /***/ }),
-/* 125 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.9 Object.getPrototypeOf(O)
@@ -32495,16 +32954,16 @@ __webpack_require__(59)('getPrototypeOf', function () {
 
 
 /***/ }),
-/* 126 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(127), __esModule: true };
-
-/***/ }),
 /* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(128);
+module.exports = { "default": __webpack_require__(128), __esModule: true };
+
+/***/ }),
+/* 128 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(129);
 var $Object = __webpack_require__(1).Object;
 module.exports = function getOwnPropertyDescriptor(it, key) {
   return $Object.getOwnPropertyDescriptor(it, key);
@@ -32512,7 +32971,7 @@ module.exports = function getOwnPropertyDescriptor(it, key) {
 
 
 /***/ }),
-/* 128 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)

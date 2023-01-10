@@ -12,6 +12,7 @@
   box-sizing: border-box;
   width: 70px;
   text-align: center;
+  display: block;
 }
 .simple2 ol::after {
   content: '.';
