@@ -2,7 +2,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactDragListView from 'react-drag-listview/src/index.js';
+
 import './index.less';
+
+// Import only if you need to support touch screen devices
+// https://bernardo-castilho.github.io/DragDropTouch/DragDropTouch.js
+import './DragDropTouch.js';
 
 class Demo extends React.Component {
   constructor(props) {
@@ -40,7 +45,7 @@ class Demo extends React.Component {
               {this.state.data.map((item, index) => (
                 <li key={index}>
                   {item.title}
-                  <a href="#">Drag</a>
+                  <a>Start Drag</a>
                 </li>
             ))}
             </ol>

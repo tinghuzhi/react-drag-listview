@@ -29,9 +29,12 @@ ul {
 
 .simple1 ol li {
   border-bottom: solid 1px #ddd;
-  padding: 16px;
+  padding: 8px 16px;
+  min-height: 60px;
   position: relative;
   transition: all ease 0.3s;
+  display: flex;
+  align-items: center;
 }
 
 .simple1 ol li:hover {
@@ -42,6 +45,8 @@ ul {
   position: absolute;
   right: 20px;
   cursor: move;
+  user-select: none;
+  padding: 10px;
 }
 
 .simple1 ol li:nth-last-child(1) {

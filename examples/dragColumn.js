@@ -6,6 +6,10 @@ import ReactDragListView from 'react-drag-listview/src/index.js';
 import './index.less';
 import './dragColumn.less';
 
+// Import only if you need to support touch screen devices
+// https://bernardo-castilho.github.io/DragDropTouch/DragDropTouch.js
+import './DragDropTouch.js';
+
 const { DragColumn } = ReactDragListView;
 
 class Demo extends React.Component {
@@ -44,7 +48,7 @@ class Demo extends React.Component {
               {this.state.data.map((item, index) => (
                 <li key={index}>
                   {item.title}
-                  <a href="#">Drag</a>
+                  <a>Drag</a>
                 </li>
             ))}
             </ol>

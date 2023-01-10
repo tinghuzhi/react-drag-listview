@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { closest, getDomIndex, getScrollElement, isTouchScreen } from './util';
+import { closest, getDomIndex, getScrollElement } from './util';
 
 const DEFAULT_NODE_SELECTOR = 'tr';
 const DIRECTIONS = {
@@ -35,7 +35,6 @@ class ReactDragListView extends Component {
 
   constructor(props) {
     super(props);
-    this.onTouchStart = this.onTouchStart.bind(this);
     this.onMouseDown = this.onMouseDown.bind(this);
     this.onDragStart = this.onDragStart.bind(this);
     this.onDragEnter = this.onDragEnter.bind(this);
@@ -50,6 +49,8 @@ class ReactDragListView extends Component {
     this.scrollElement = null;
     this.scrollTimerId = -1;
     this.direction = DIRECTIONS.BOTTOM;
+
+    this.flagDragStart = false;
   }
 
   componentWillUnmount() {
@@ -60,18 +61,15 @@ class ReactDragListView extends Component {
     }
   }
 
-  onTouchStart(e) {
-    if (!isTouchScreen()) {
-      return;
-    }
-    this.startDrag(e);
-  }
-
   onMouseDown(e) {
-    if (isTouchScreen()) {
+    if (this.flagDragStart) {
       return;
     }
+    this.flagDragStart = true;
     this.startDrag(e);
+    setTimeout(() => {
+      this.flagDragStart = false;
+    }, 350);
   }
 
   onDragStart(e) {
@@ -248,7 +246,7 @@ class ReactDragListView extends Component {
 
   render() {
     return (
-      <div role="presentation" onTouchStart={this.onTouchStart} onMouseDown={this.onMouseDown} ref={(c) => { this.dragList = c; }}>
+      <div role="presentation" onTouchStart={this.onMouseDown} onMouseDown={this.onMouseDown} ref={(c) => { this.dragList = c; }}>
         {this.props.children}
       </div>
     );
