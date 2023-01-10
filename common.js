@@ -1533,8 +1533,6 @@ var ReactDragListView = function (_Component) {
     _this.scrollElement = null;
     _this.scrollTimerId = -1;
     _this.direction = DIRECTIONS.BOTTOM;
-
-    _this.flagDragStart = false;
     return _this;
   }
 
@@ -1550,16 +1548,7 @@ var ReactDragListView = function (_Component) {
   }, {
     key: 'onMouseDown',
     value: function onMouseDown(e) {
-      var _this2 = this;
-
-      if (this.flagDragStart) {
-        return;
-      }
-      this.flagDragStart = true;
       this.startDrag(e);
-      setTimeout(function () {
-        _this2.flagDragStart = false;
-      }, 350);
     }
   }, {
     key: 'onDragStart',
@@ -1749,14 +1738,17 @@ var ReactDragListView = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _this3 = this;
+      var _this2 = this;
 
-      return __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
-        'div',
-        { role: 'presentation', onTouchStart: this.onMouseDown, onMouseDown: this.onMouseDown, ref: function ref(c) {
-            _this3.dragList = c;
-          } },
-        this.props.children
+      return (
+        // eslint-disable-next-line react/no-unknown-property
+        __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
+          'div',
+          { role: 'presentation', onPointerDown: this.onMouseDown, ref: function ref(c) {
+              _this2.dragList = c;
+            } },
+          this.props.children
+        )
       );
     }
   }]);
